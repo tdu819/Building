@@ -11,6 +11,7 @@ namespace Lab1
         static void Main(string[] args)
         {
             Console.WriteLine("hw");
+            //
             Console.ReadLine();
         }
     }
