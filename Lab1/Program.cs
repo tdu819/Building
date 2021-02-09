@@ -177,7 +177,19 @@ namespace Lab1
             }
 
             Console.WriteLine();
-            Console.WriteLine("2. We will find price ");
+            Console.WriteLine("2. We will find price using building number and apartment number ");
+            Console.WriteLine("Type building number please: 1..4");
+            int bnumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("Type apartment number 1..150");
+            int apartmentnumber = int.Parse(Console.ReadLine());
+
+            foreach (var apartment in Apartment.Items)
+            {
+                if (apartment.Building.Number == bnumber && apartment.Number == apartmentnumber) 
+                {
+                    Console.WriteLine($"It will be {apartment.Area_size * Apartment.square_price}");
+                }
+            }
 
 
             //Console.WriteLine(Apartment_Items_Count * buildings_count);
@@ -185,5 +197,3 @@ namespace Lab1
         }
     }
 }
-
-
