@@ -146,6 +146,7 @@ namespace Lab1
 
 
 
+
             //int result = p1.Apartments[0].Area_size * Apartment.square_price;
 
             //int home = p1.Apartment.Building.Number;
@@ -160,6 +161,7 @@ namespace Lab1
             //Console.WriteLine(result);
             //Console.WriteLine();
 
+            Console.WriteLine();
             Console.WriteLine("1. We will find price(to pay for apartment) for the person");
             Console.WriteLine("Type name:");
             string s = Console.ReadLine();
@@ -177,6 +179,8 @@ namespace Lab1
             }
 
             Console.WriteLine();
+
+
             Console.WriteLine("2. We will find price using building number and apartment number ");
             Console.WriteLine("Type building number please: 1..4");
             int bnumber = int.Parse(Console.ReadLine());
@@ -190,8 +194,59 @@ namespace Lab1
                     Console.WriteLine($"It will be {apartment.Area_size * Apartment.square_price}");
                 }
             }
+            Console.WriteLine();
+
+            Console.WriteLine("3. We will find all the apartments  that were saled  ");
+            foreach (var apartment in Apartment.Items)
+            {
+                if (apartment.IsOwn == true)
+                {
+                    Console.WriteLine(apartment);
+                }
+            }
+
+            Console.WriteLine();
 
 
+            Console.WriteLine("4. We will find all the apartments  that were saled  ");
+            foreach (var apartment in Apartment.Items)
+            {
+                if (apartment.IsOwn == true)
+                {
+                    Console.WriteLine(apartment);
+                }
+            }
+
+            Console.WriteLine("5. We will find sum of price that pay for apartment were bought");
+            Console.WriteLine("Type building number please: 1..4");
+            int bnumber2 = int.Parse(Console.ReadLine());
+            int sum = 0;;
+            foreach (var building in Building.Items)
+            {
+                if (building.Number == bnumber2)
+                {
+                    foreach (var apartment in building.Apartments)
+                    {
+                        if (apartment.IsOwn == true)
+                        {
+                            sum += apartment.Area_size;
+                        }
+                    }
+                }
+            }
+            sum = sum * Apartment.square_price;
+            Console.WriteLine(sum);
+            Console.WriteLine();
+            Console.ReadLine();
+
+            Console.Clear();
+            Console.WriteLine("6. We will change price for 1 square meter");
+            
+            Apartment.square_price = 100;
+            Console.WriteLine("Now Apartment.square_price = 100");
+
+            ShowApartments();
+            Console.WriteLine();
             //Console.WriteLine(Apartment_Items_Count * buildings_count);
             Console.ReadLine(); 
         }
