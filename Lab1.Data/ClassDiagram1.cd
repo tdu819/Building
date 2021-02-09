@@ -7,46 +7,46 @@
     </Compartments>
     <TypeIdentifier>
       <HashCode>CAAAgAAAAAAAAAAEAAAgQAQAAEAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Classes\Person.cs</FileName>
+      <FileName>Models\Person.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab1.Data.Apartment">
     <Position X="8" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AKAAABAAAAEAAAAEAMAAAAAAAgQAAAAAAAQAAAAAAAA=</HashCode>
-      <FileName>Classes\Apartment.cs</FileName>
+      <HashCode>AKAAABAAAAEAAAAEAMAAAAAAAgQAAAAAAAQAAAAACAA=</HashCode>
+      <FileName>Models\Apartment.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab1.Data.Base&lt;T&gt;" Collapsed="true">
     <Position X="5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Classes\Base.cs</FileName>
+      <FileName>Models\Base.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab1.Data.Building">
     <Position X="5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAEAEAgAAAAAAAAAgAAAAIAAAAAABA=</HashCode>
-      <FileName>Classes\Building.cs</FileName>
+      <FileName>Models\Building.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab1.Data.Entrance" Collapsed="true">
     <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAADAAAAEQAAAAAAAAAAQACAAAAAAAAAAAQAAAAAA=</HashCode>
-      <FileName>Classes\Entrance.cs</FileName>
+      <FileName>Models\Entrance.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab1.Data.Elevator" Collapsed="true">
     <Position X="3.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAEAAAAAAABA=</HashCode>
-      <FileName>Classes\Elevator.cs</FileName>
+      <FileName>Models\Elevator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="System.Guid" Collapsed="true">
-    <Position X="0.5" Y="2.25" Width="1.5" />
+    <Position X="0.75" Y="2" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Struct>

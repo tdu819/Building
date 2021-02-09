@@ -9,6 +9,7 @@ namespace Lab1
 {
     public class Program
     {
+        
         static void ShowApartments()
         {
             foreach (var item in Apartment.Items)
@@ -67,18 +68,75 @@ namespace Lab1
             //Building b2 = new Building() { Street = "sdf", Number = 1 };
             //Console.WriteLine(b2);
 
-            Person p0 = new Person() { Name = "Developer", PhoneNumber = 670000000 };
+            
             Person p1 = new Person() { Name = "Name1", PhoneNumber = 670000001 };
             Person p2 = new Person() { Name = "Name2", PhoneNumber = 670000002 };
 
             //creating apartments 150
-            CreateAppartments(b1, max_Apartments_in_Building, p0);
-            CreateAppartments(b2, max_Apartments_in_Building, p0);
-            CreateAppartments(b3, max_Apartments_in_Building, p0);
-            CreateAppartments(b4, max_Apartments_in_Building, p0);
+            CreateAppartments(b1, max_Apartments_in_Building, Person.p0);
+            CreateAppartments(b2, max_Apartments_in_Building, Person.p0);
+            CreateAppartments(b3, max_Apartments_in_Building, Person.p0);
+            CreateAppartments(b4, max_Apartments_in_Building, Person.p0);
+
+            
+
+            Console.WriteLine();
+            Apartment.Items[0].ChangeOwner(p1);
+            Apartment.Items[2].ChangeOwner(p2);
+            Apartment.Items[3].ChangeOwner(p1);
+
+            //public void CreateEntrances ()
+            //{
+
+            //}
+            Entrance entrance1_1 = new Entrance() { Name = "b1e1" };
+            Entrance entrance1_2 = new Entrance() { Name = "b1e2" };
+            Entrance entrance2_1 = new Entrance() { Name = "b2e1" };
+            Entrance entrance2_2 = new Entrance() { Name = "b2e2" };
+            Entrance entrance3_1 = new Entrance() { Name = "b3e1" };
+            Entrance entrance3_2 = new Entrance() { Name = "b3e2" };
+            Entrance entrance4_1 = new Entrance() { Name = "b4e1" };
+            Entrance entrance4_2 = new Entrance() { Name = "b4e2" };
+
+            int Apartment_Items_Count = Apartment.Items.Count;
+            for (int i = 0; i < Apartment_Items_Count ; i++) 
+            {
+                if (i < 75)
+                {
+                    Apartment.Items[i].Entrance = entrance1_1;
+                }
+                else if (i < 150)
+                {
+                    Apartment.Items[i].Entrance = entrance1_2;
+                }
+                else if (i < 150 + 75)
+                {
+                    Apartment.Items[i].Entrance = entrance2_1;
+                }
+                else if (i < 150 + 150)
+                {
+                    Apartment.Items[i].Entrance = entrance2_2;
+                }
+                else if (i < 300 + 75)
+                {
+                    Apartment.Items[i].Entrance = entrance3_1;
+                }
+                else if (i < 300 + 150)
+                {
+                    Apartment.Items[i].Entrance = entrance3_2;
+                }
+                else if (i < 300 + 150 + 75)
+                {
+                    Apartment.Items[i].Entrance = entrance4_1;
+                }
+                else if (i < 300 + 150 + 150) 
+                {
+                    Apartment.Items[i].Entrance = entrance4_2;
+                }
+
+            }
 
             ShowApartments();
-
 
             //Person p1 = new Person() { Name = "Name1", PhoneNumber = 671234561, Apartment = Apartment.Items[0] };
             //Person p2 = new Person() { Name = "Name2", PhoneNumber = 671234562, Apartment = Apartment.Items[1] };
@@ -102,21 +160,27 @@ namespace Lab1
             //Console.WriteLine(result);
             //Console.WriteLine();
 
-
+            Console.WriteLine("1. We will find price(to pay for apartment) for the person");
             Console.WriteLine("Type name:");
             string s = Console.ReadLine();
 
-            //foreach (var item in Person.Items)
-            //{
-            //    if (item.Name == s)
-            //    {
-            //        Console.WriteLine(item.Apartment.Area_size * Apartment.square_price);
-            //        //Console.WriteLine(item);
-            //    }
-            //}
+            foreach (var person in Person.Items)
+            {
+                if (person.Name == s)
+                {
+                    foreach (var apartment in person.Apartments)
+                    {
+                        Console.WriteLine(apartment.Area_size * Apartment.square_price);
+                        //Console.WriteLine(item);
+                    }
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("2. We will find price ");
 
 
-            Console.WriteLine(Apartment.Items.Count);
+            //Console.WriteLine(Apartment_Items_Count * buildings_count);
             Console.ReadLine(); 
         }
     }

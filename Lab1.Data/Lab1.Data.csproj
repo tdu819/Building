@@ -41,12 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Apartment.cs" />
-    <Compile Include="Classes\Building.cs" />
-    <Compile Include="Classes\Base.cs" />
-    <Compile Include="Classes\Elevator.cs" />
-    <Compile Include="Classes\Entrance.cs" />
-    <Compile Include="Classes\Person.cs" />
+    <Compile Include="Models\Apartment.cs" />
+    <Compile Include="Models\Building.cs" />
+    <Compile Include="Models\Base.cs" />
+    <Compile Include="Models\Elevator.cs" />
+    <Compile Include="Models\Entrance.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

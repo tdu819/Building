@@ -8,6 +8,7 @@ namespace Lab1.Data
 {
     public class Person : Base<Person>
     {
+        public static Person p0 = new Person() { Name = "Developer", PhoneNumber = 670000000 };
         public string Name { get; set; }
         public int PhoneNumber { get; set; }
         public DateTime OrderDate { get; set; }

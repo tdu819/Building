@@ -37,8 +37,6 @@ namespace Lab1.Data
             }
         }
 
-
-
         private Guid _personId;
         public Person Person
         {
@@ -46,12 +44,33 @@ namespace Lab1.Data
             set { _personId = value.Id; }
         }
 
+        private Guid _entranceId;
+        public Entrance Entrance
+        {
+            get { return Entrance.Items.Where(b => b.Id == _entranceId).FirstOrDefault(); }
+            set { _entranceId = value.Id; }
+        }
+
+
+        public void ChangeOwner(Person p)
+        {
+            this.Person = p;
+            if (p != Person.p0)
+            {
+                this.IsOwn = true;
+            }
+            else
+            {
+                this.IsOwn = false;
+            }
+            this.Person.OrderDate = DateTime.Now;
+        }
         
         public override string ToString()
         {
-            return "Building number: " + Building.Number + ". " +
+            return "Building number: " + Building.Number + ". " + "Entrance name: " + this.Entrance + ". " +
                 "Apartment number: " + this.Number + ". " +
-                "Area_size: " + this.Area_size + ". Payment for Appartment = " + this.Area_size * square_price + " " + ". Appartment owner = " + this.Person;
+                "Area_size: " + this.Area_size + ". Payment for Appartment = " + this.Area_size * square_price + " " + ". Appartment owner = " + this.Person + ". Has Owner = " + this.IsOwn;
         }
     }
 }

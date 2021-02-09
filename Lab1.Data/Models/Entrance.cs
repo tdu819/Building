@@ -30,7 +30,6 @@ namespace Lab1.Data
             {
                 //Console.WriteLine("Building properties");
                 _buildingId = value.Id;
-
             }
         }
 
@@ -44,7 +43,10 @@ namespace Lab1.Data
             set { _elevatorId = value.Id; }
         }
 
-        
+        public override string ToString()
+        {
+            return this.Name;
+        }
 
     }
 }
