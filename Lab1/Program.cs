@@ -9,29 +9,38 @@ namespace Lab1
 {
     public class Program
     {
+        static void ShowApartments()
+        {
+            foreach (var item in Apartment.Items)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+
          //10 грн за квадратный метр.
-        static void CreateAppartments(Building b, byte max_Apartments_in_Building)
+        static void CreateAppartments(Building b, byte max_Apartments_in_Building, Person p0)
         {
             Random Rand = new Random();
             for (int i = 0; i < max_Apartments_in_Building; i++)
             {
-                Apartment.Items.Add(new Apartment() { Number = i + 1, Area_size = Rand.Next(50, 100), Building = b, IsOwn = false, OwnerName = "Developer" }); //Developer = забудовник.
-                Console.WriteLine(Apartment.Items[i]);
+                new Apartment() { Number = i + 1, Area_size = Rand.Next(50, 100), Building = b, IsOwn = false, Person = p0 }; //Developer = забудовник.
+                //Console.WriteLine(Apartment.Items[i]);
             }
         }
 
         static void Main(string[] args)
         {
             Random Rand = new Random();
-            byte max_Apartments_in_Building = 5;
+            byte max_Apartments_in_Building = 150;
             int a = Rand.Next(50, 100);
 
             //int max_Apartments_in_Building = 150;
-            
+
 
             byte buildings_count = 4;
 
-            
+
 
             //Console.WriteLine(a + "\n");
 
@@ -58,49 +67,56 @@ namespace Lab1
             //Building b2 = new Building() { Street = "sdf", Number = 1 };
             //Console.WriteLine(b2);
 
+            Person p0 = new Person() { Name = "Developer", PhoneNumber = 670000000 };
+            Person p1 = new Person() { Name = "Name1", PhoneNumber = 670000001 };
+            Person p2 = new Person() { Name = "Name2", PhoneNumber = 670000002 };
+
             //creating apartments 150
-            CreateAppartments(b1, max_Apartments_in_Building);
-            CreateAppartments(b2, max_Apartments_in_Building);
-            CreateAppartments(b3, max_Apartments_in_Building);
-            CreateAppartments(b4, max_Apartments_in_Building);
+            CreateAppartments(b1, max_Apartments_in_Building, p0);
+            CreateAppartments(b2, max_Apartments_in_Building, p0);
+            CreateAppartments(b3, max_Apartments_in_Building, p0);
+            CreateAppartments(b4, max_Apartments_in_Building, p0);
+
+            ShowApartments();
+
 
             //Person p1 = new Person() { Name = "Name1", PhoneNumber = 671234561, Apartment = Apartment.Items[0] };
             //Person p2 = new Person() { Name = "Name2", PhoneNumber = 671234562, Apartment = Apartment.Items[1] };
 
-            Person p1 = new Person() { Name = "Name1", PhoneNumber = 670000001, Apartment = Apartment.Items[0] };
-            Person p2 = new Person() { Name = "Name2", PhoneNumber = 670000002 };
 
-            Person.Items.Add(p1);
-            Person.Items.Add(p2);
 
-            int result = p1.Apartment.Area_size * Apartment.square_price;
 
-            int home = p1.Apartment.Building.Number;
-            Console.WriteLine(home);
-            Console.WriteLine(p1.Apartment.Building.Street.ToString());
-            Console.WriteLine(p1.Apartment.Building.Number);
 
-            Console.WriteLine(Apartment.Items[0].Building);
-            Console.WriteLine(Apartment.Items[0]);
 
-            Console.WriteLine(Apartment.Items[0].Area_size);
-            Console.WriteLine(result);
-            Console.WriteLine();
+            //int result = p1.Apartments[0].Area_size * Apartment.square_price;
+
+            //int home = p1.Apartment.Building.Number;
+            //Console.WriteLine(home);
+            //Console.WriteLine(p1.Apartment.Building.Street.ToString());
+            //Console.WriteLine(p1.Apartment.Building.Number);
+
+            //Console.WriteLine(Apartment.Items[0].Building);
+            //Console.WriteLine(Apartment.Items[0]);
+
+            //Console.WriteLine(Apartment.Items[0].Area_size);
+            //Console.WriteLine(result);
+            //Console.WriteLine();
 
 
             Console.WriteLine("Type name:");
             string s = Console.ReadLine();
 
-            foreach (var item in Person.Items)
-            {
-                if (item.Name == s)
-                {
-                    Console.WriteLine(item.Apartment.Area_size * Apartment.square_price);
-                    //Console.WriteLine(item);
-                }
-            }
+            //foreach (var item in Person.Items)
+            //{
+            //    if (item.Name == s)
+            //    {
+            //        Console.WriteLine(item.Apartment.Area_size * Apartment.square_price);
+            //        //Console.WriteLine(item);
+            //    }
+            //}
 
 
+            Console.WriteLine(Apartment.Items.Count);
             Console.ReadLine(); 
         }
     }

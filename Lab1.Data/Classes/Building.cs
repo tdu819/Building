@@ -36,6 +36,13 @@ namespace Lab1.Data
             }
         }
 
+        public List<Entrance> Entrances
+        {
+            get
+            {
+                return Entrance.Items.Where(a => a.Building == this).ToList();
+            }
+        }
 
 
         public override string ToString()

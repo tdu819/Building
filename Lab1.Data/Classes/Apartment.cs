@@ -31,7 +31,7 @@ namespace Lab1.Data
             get { return Building.Items.Where(b => b.Id == _buildingId).FirstOrDefault(); }
             set
             {
-                Console.WriteLine("Building properties");
+                //Console.WriteLine("Building properties");
                 _buildingId = value.Id;
 
             }
@@ -46,10 +46,12 @@ namespace Lab1.Data
             set { _personId = value.Id; }
         }
 
-        //Person p = this.Person;
+        
         public override string ToString()
         {
-            return "Building number: " + Building.Number + ". Area_size: " + this.Area_size + ". Payment for Appartment = " + this.Area_size * square_price + " ";
+            return "Building number: " + Building.Number + ". " +
+                "Apartment number: " + this.Number + ". " +
+                "Area_size: " + this.Area_size + ". Payment for Appartment = " + this.Area_size * square_price + " " + ". Appartment owner = " + this.Person;
         }
     }
 }

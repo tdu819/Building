@@ -1,34 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Lab1.Data.Person">
-    <Position X="2.5" Y="1.75" Width="1.5" />
+    <Position X="2.5" Y="3" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>CAAAgAAAAAAQAAAEAAAAQAQAAAAAAAAAAAAAQAAAAAA=</HashCode>
-      <FileName>Person.cs</FileName>
+      <HashCode>CAAAgAAAAAAAAAAEAAAgQAQAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Person.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="_apartmentId" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Lab1.Data.Apartment">
-    <Position X="8" Y="2" Width="1.5" />
+    <Position X="8" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AKAAABAAAAEAAAAEAMAAAAAAAgQAAAAAAAQAAAAAAAA=</HashCode>
-      <FileName>Apartment.cs</FileName>
+      <FileName>Classes\Apartment.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab1.Data.Base&lt;T&gt;" Collapsed="true">
-    <Position X="4.75" Y="0.5" Width="1.5" />
+    <Position X="5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Base.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab1.Data.Building">
-    <Position X="4.75" Y="1.75" Width="1.5" />
+    <Position X="5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAQAAEAEAgAAAAAAAAAgAAAAIAAAAAAAA=</HashCode>
-      <FileName>Building.cs</FileName>
+      <HashCode>AAAAAAAAAAAAQAAEAEAgAAAAAAAAAgAAAAIAAAAAABA=</HashCode>
+      <FileName>Classes\Building.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab1.Data.Entrance" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAADAAAAEQAAAAAAAAAAQACAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Classes\Entrance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab1.Data.Elevator" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAEAAAAAAABA=</HashCode>
+      <FileName>Classes\Elevator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="System.Guid" Collapsed="true">
