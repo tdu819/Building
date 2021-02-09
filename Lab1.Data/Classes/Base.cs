@@ -23,6 +23,7 @@ namespace Lab1.Data
         public Base()
         {
             Id = Guid.NewGuid();
+            Items.Add((T)this);
         }
         public Base(Guid id)
         {

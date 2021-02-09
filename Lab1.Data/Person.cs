@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Lab1.Data
-{    public class Person : Base<Person>
+{
+    public class Person : Base<Person>
     {
         public string Name { get; set; }
         public int PhoneNumber { get; set; }
@@ -22,6 +23,10 @@ namespace Lab1.Data
             set { _apartmentId = value.Id; }
         }
 
+        public override string ToString()
+        {
+            return Name;
+        }
 
     }
 }

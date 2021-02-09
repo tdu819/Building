@@ -22,7 +22,7 @@ namespace Lab1.Data
             //Number = number;  
         }
 
-        public Building (string street, int number)
+        public Building(string street, int number)
         {
             Street = street;
             Number = number;
@@ -40,7 +40,8 @@ namespace Lab1.Data
 
         public override string ToString()
         {
-            return this.Street + " " + this.Number;
+            //return this.Street + " " + this.Number;
+            return this.Number.ToString();
         }
 
     }

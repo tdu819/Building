@@ -8,16 +8,18 @@ namespace Lab1.Data
 {
     public class Apartment : Base<Apartment>
     {
-        public int Number {get; set;}
+        public static int square_price = 10; // 10 грн за квадратный метр.
+        public int Number { get; set; }
         public int Area_size { get; set; }
         public bool IsOwn { get; set; }
+        public string OwnerName { get; set; }
         //public class Building : Base<Building>
         public Apartment() { }
 
         private Guid _buildingId;
 
 
-        private int _buildingnumber;
+        //private int _buildingnumber;
         //public Building Building
         //{
         //    get { return Building.Items.Where(b => b.Number == _buildingnumber).FirstOrDefault(); }
@@ -27,7 +29,12 @@ namespace Lab1.Data
         public Building Building
         {
             get { return Building.Items.Where(b => b.Id == _buildingId).FirstOrDefault(); }
-            set { _buildingId = value.Id; }
+            set
+            {
+                Console.WriteLine("Building properties");
+                _buildingId = value.Id;
+
+            }
         }
 
 
@@ -39,5 +46,10 @@ namespace Lab1.Data
             set { _personId = value.Id; }
         }
 
+        //Person p = this.Person;
+        public override string ToString()
+        {
+            return "Building number: " + Building.Number + ". Area_size: " + this.Area_size + ". Payment for Appartment = " + this.Area_size * square_price + " ";
+        }
     }
 }

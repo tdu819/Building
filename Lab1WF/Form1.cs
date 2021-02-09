@@ -25,7 +25,7 @@ namespace Lab1WF
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var g1 = new Building() {Street = "adf", Number=1 };
+            var g1 = new Building2() {Street = "adf", Number=1 };
         }
     }
 }

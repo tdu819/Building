@@ -41,13 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Apartment.cs" />
+    <Compile Include="Apartment.cs" />
+    <Compile Include="Building.cs" />
     <Compile Include="Classes\Base.cs" />
-    <Compile Include="Classes\Building.cs" />
     <Compile Include="Classes\Elevator.cs" />
-    <Compile Include="Classes\Person.cs" />
     <Compile Include="Classes\Entrance.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
